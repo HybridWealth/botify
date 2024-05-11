@@ -5,7 +5,7 @@ Feel free to clone and you can tweak to suit your taste. Am open if you want to 
 ## Usage
 Add the bot to the group you want it to manage and provide neccessary permissions.
 
-##Requirement
+## Requirement
 Depending on the type of server you're using, but you will probably need Node.js and the following libraries
 ```
 npm install axios nodejs-telegram-api-bot telegraf
