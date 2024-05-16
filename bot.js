@@ -6,8 +6,8 @@ const cron = require('node-cron');
 
 
 // Replace 'YOUR_BOT_TOKEN' with your actual bot token
-const bot = new Telegraf('YOUR_BOT_TOKEN');
-const chatId = 'GROUP_CHAT_ID'; // Replace with your group chat ID
+const bot = new Telegraf('6870199671:AAG2YKZwGy0qCG9TJjt0TrQdBGrbzgllXpE');
+const chatId = '2060484332'; // Replace with your group chat ID
 
 // Command handler for '/start'
 bot.start((ctx) => {
@@ -100,7 +100,7 @@ async function sendDailyVerse() {
   const verse = await getDailyVerse();
 
   if (verse) {
-    const groupChatId = 'GROUP_CHAT_ID'; // Replace with your group's chat ID
+    const groupChatId = '2060484332'; // Replace with your group's chat ID
     bot.telegram.sendMessage(groupChatId, `Good Day you all. Kindly grow in spirit on this blessed day with this Daily Bible verse:\n\n${verse}`);
   }
 }
