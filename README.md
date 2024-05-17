@@ -1,12 +1,19 @@
 # botify
-A bot designed to automate message and important recurring notification
-Feel free to clone and you can tweak to suit your taste. Am open if you want to collaborate.
-
+- This is a Bot design specifically for Aspiring Mechanical Engineering students group on telegram
+- This group can add user, warn user(s) who violate group rules, remove user and provide information to students
+- Built with JavaScript(Node.JS)
+- Strictly for educational Purpose
 ## Usage
-Add the bot to the group you want it to manage and provide neccessary permissions.
+Add the bot to the group you want it to manage, promote it to admin and provide neccessary permissions.
 
 ## Requirement
 Depending on the type of server you're using, but you will probably need Node.js and the following libraries
+- For Debian based system
+```
+apt install nodejs-lts
+```
+
+
 ```
 npm install axios nodejs-telegram-api-bot telegraf
 ```
