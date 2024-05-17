@@ -12,10 +12,17 @@ Depending on the type of server you're using, but you will probably need Node.js
 ```
 apt install nodejs-lts
 ```
-
-
+- For CentOS
 ```
-npm install axios nodejs-telegram-api-bot telegraf
+yum install nodejs-lts
+```
+
+- For other distro and Platform check out the official node.js website.
+
+ After successful installation, copy the following code amd paste it to your browser
+ 
+```
+npm install axios nodejs-telegram-api-bot telegraf pdf-parse node-cron cron-schedule
 ```
 ## Note:
 This program only contain minimal code for basic functionalities, more big features will be rolled out soon enough. In the meantime, follow my profile and star this repo.

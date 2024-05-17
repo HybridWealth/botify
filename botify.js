@@ -3,8 +3,8 @@ const schedule = require('node-schedule');
 const pdfParse = require('pdf-parse');
 const axios = require('axios');
 
-const TELEGRAM_BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN';
-const CHAT_ID = 'YOUR_GROUP_CHAT_ID'; // Replace with your group chat ID
+const TELEGRAM_BOT_TOKEN = '6870199671:AAG2YKZwGy0qCG9TJjt0TrQdBGrbzgllXpE';
+const CHAT_ID = '2090071905'; // Replace with your group chat ID
 
 const bot = new Telegraf(TELEGRAM_BOT_TOKEN);
 
