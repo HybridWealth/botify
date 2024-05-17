@@ -11,7 +11,7 @@ const bot = new Telegraf(TELEGRAM_BOT_TOKEN);
 
 // In-memory store for warnings
 const warnings = {};
-const foulWords = ['stupid', 'bastard', 'sex', 'Fuck', 'fucking', 'retard', 'dumb', 'hookup']; // Add actual words
+const foulWords = ['stupid', 'bastard', 'sex', 'Fuck', 'fucking', 'retard', 'dumb', 'hookup', 'fuck up', 'fucked up']; // Add actual words
 
 // Initialize SQLite database
 const db = new sqlite3.Database('./pdf_data.db');

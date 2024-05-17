@@ -4,7 +4,7 @@
   "description": "A bot written in JavaScript solely designed and built for aspirants students who are studying Engineering especially Mechanical Engineering in the university",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node botify.js",
     "start": "node index.js"
   },
   "keywords": [],
