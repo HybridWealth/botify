@@ -1,13 +1,19 @@
 {
-  "name": "botify",
-  "version": "1.7",
-  "description": "A bot written in JavaScript solely designed and built for aspirants students who are studying Engineering especially Mechanical Engineering in the university",
+  "name": "Botify",
+  "version": "1.0.0",
+  "description": "A Telegram bot for managing group interactions and answering questions based on PDF content",
   "main": "index.js",
   "scripts": {
-    "test": "node botify.js",
     "start": "node index.js"
   },
-  "keywords": [],
+  "dependencies": {
+    "axios": "^0.21.1",
+    "compromise": "^13.11.1",
+    "node-schedule": "^2.1.0",
+    "pdf-parse": "^1.1.1",
+    "sqlite3": "^5.0.2",
+    "telegraf": "^4.0.1"
+  },
   "author": "Adedolapo Adeboye",
   "license": "ISC"
 }

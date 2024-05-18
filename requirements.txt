@@ -1,7 +1,0 @@
-pkg install nodejs-lts
-
-npm install axios node-telegram-bot-api telegraf compromise sqlite3 telegraf pdf-parse node-schedule
-
-
-#to test your connections with OpenAI
-curl https://api.openai.com/v1/chat/completions
