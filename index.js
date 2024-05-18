@@ -71,14 +71,14 @@ function isQuestion(message) {
 
 // Handle '/start' command
 bot.start((ctx) => {
-  ctx.reply('Welcome to the Aspiring Mechanical Engineers Study Group Bot! Send me a PDF and ask questions based on its content.');
+  ctx.reply('Welcome, How can I help you?.');
 });
 
 // Welcome new members and learn from greetings
 bot.on('new_chat_members', (ctx) => {
   const groupId = ctx.chat.id.toString();
   ctx.message.new_chat_members.forEach((member) => {
-    const greetingMessage = `Welcome, @${member.username || member.first_name}! We're glad to have you here.`;
+    const greetingMessage = `Welcome, @${member.username || member.first_name}! We're glad to have you here. Stay updated by checking previous messages.`;
     const stmt = db.prepare("INSERT INTO greetings (group_id, message) VALUES (?, ?)");
     stmt.run(groupId, greetingMessage);
     stmt.finalize();
@@ -109,7 +109,7 @@ bot.on('text', async (ctx) => {
         ctx.reply(response);
       });
     } else {
-      ctx.reply('Please ask a question.');
+      ctx.reply('What do you need help with?.');
     }
   } else {
     // Handle group messages
@@ -126,7 +126,7 @@ bot.on('text', async (ctx) => {
       } else {
         // Warn the user
         warnings[userId] = true;
-        ctx.reply(`@${username}, please refrain from using foul language. This is a warning.`);
+        ctx.reply(`@${username}, please refrain from using foul language. This is a one-time warning!`);
       }
     } else {
       // Process normal messages
@@ -135,7 +135,7 @@ bot.on('text', async (ctx) => {
           ctx.reply(response);
         });
       } else {
-        ctx.reply('Please ask a question.');
+        ctx.reply('Am ready to help you, specify your question and end it with question tag("?").');
       }
     }
   }
@@ -152,10 +152,10 @@ bot.on('document', async (ctx) => {
     const response = await axios.get(fileLink.href, { responseType: 'arraybuffer' });
     const data = await pdfParse(response.data);
     savePDFContent(groupId, data.text);
-    ctx.reply('PDF content has been processed and stored. You can now ask questions based on the PDF.');
+    ctx.reply('PDF content has been processed and stored for dynamic learning. Thank you for contributing to my learning ;).');
   } catch (error) {
     console.error('Error parsing PDF:', error);
-    ctx.reply('Failed to process the PDF file.');
+    ctx.reply('Failed to process the PDF file. Please check and make sure you are sending a PDF file and it is not corrupted');
   }
 });
 
@@ -182,7 +182,7 @@ schedule.scheduleJob('0 7 * * *', 'Etc/GMT+1', async () => {
       try {
         bot.telegram.sendMessage(groupId, message);
       } catch (error) {
-        console.error('Error sending daily greeting message:', error);
+        console.error('Greetings to you my able comrades in the house, today is another beautiful day to be productive :)', error);
       }
     });
   }
