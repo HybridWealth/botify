@@ -5,7 +5,7 @@ const axios = require('axios');
 const sqlite3 = require('sqlite3').verbose();
 const nlp = require('compromise');
 
-const TELEGRAM_BOT_TOKEN = '6870199671:AAG2YKZwGy0qCG9TJjt0TrQdBGrbzgllXpE';
+const TELEGRAM_BOT_TOKEN = '';
 
 const bot = new Telegraf(TELEGRAM_BOT_TOKEN);
 
